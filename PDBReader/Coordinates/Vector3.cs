@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PDBReader
+﻿namespace PDBReader.Coordinates
 {
-    class Vector3
+    internal class Vector3
     {
 
         float x;

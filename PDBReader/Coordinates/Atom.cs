@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
-namespace PDBReader
+namespace PDBReader.Coordinates
 {
     class Atom
     {
@@ -35,5 +33,6 @@ namespace PDBReader
             Vanity = vanity;
             Charge = charge;
         }
+
     }
 }
