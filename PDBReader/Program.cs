@@ -4,6 +4,8 @@ using System.Text;
 using PDBReader.Coordinates;
 using System.IO;
 
+//TODO: Parse OBSLETETE and SPLITITITT
+
 namespace PDBReader
 {
     class Program
