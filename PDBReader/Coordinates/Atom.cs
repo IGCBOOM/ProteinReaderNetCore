@@ -18,8 +18,9 @@ namespace PDBReader.Coordinates
         private string _vanity;
         private int _charge;
         private bool _het;
+        private Color _col;
 
-        public Atom(uint atomserial, string atomname, char altpos, string resname, char chainid, uint resseq, char rescode, Vector3 position, double occupancy, double tempFactor, string vanity, int charge, bool het)
+        public Atom(uint atomserial, string atomname, char altpos, string resname, char chainid, uint resseq, char rescode, Vector3 position, double occupancy, double tempFactor, string vanity, int charge, bool het, Color _col)
         {
             _atomserial = atomserial;
             _atomname = atomname;
@@ -49,6 +50,7 @@ namespace PDBReader.Coordinates
         public string GetVanity() { return _vanity; }
         public int GetCharge() { return _charge; }
         public bool GetHet() { return _het; }
+        public Color GetCol() { return _col; }
 
     }
 }
