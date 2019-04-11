@@ -3,11 +3,11 @@
     internal class Vector3
     {
 
-        float x;
-        float y;
-        float z;
+        double x;
+        double y;
+        double z;
 
-        public Vector3(float x, float y, float z)
+        public Vector3(double x, double y, double z)
         {
             this.x = x;
             this.y = y;
