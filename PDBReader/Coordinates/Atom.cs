@@ -5,34 +5,35 @@ namespace PDBReader.Coordinates
     class Atom
     {
 
-        uint AtomSerial;
-        string AtomName;
-        char AltPos;
-        string ResName;
-        char ChainID;
-        uint ResSeq;
-        char ResCode;
-        Vector3 Position;
-        float Occupancy;
-        float TempFactor;
-        string Vanity;
-        int Charge;
+        private uint _atomserial;
+        private string _atomname;
+        private char _altpos;
+        private string _resname;
+        private char _chainid;
+        private uint _resseq;
+        private char _rescode;
+        private Vector3 _position;
+        private float _occupancy;
+        private float _tempFactor;
+        private string _vanity;
+        private int _charge;
+        private bool _het;
 
-        public Atom(uint atomSerial, string atomName, char altPos, string resName, char chainID, uint resSeq, char resCode, Vector3 position, float occupancy, float tempFactor, string vanity, int charge)
+        public Atom(uint atomserial, string atomname, char altpos, string resname, char chainid, uint resseq, char rescode, Vector3 position, float occupancy, float tempFactor, string vanity, int charge, bool het)
         {
-            AtomSerial = atomSerial;
-            AtomName = atomName;
-            AltPos = altPos;
-            ResName = resName;
-            ChainID = chainID;
-            ResSeq = resSeq;
-            ResCode = resCode;
-            Position = position;
-            Occupancy = occupancy;
-            TempFactor = tempFactor;
-            Vanity = vanity;
-            Charge = charge;
+            _atomserial = atomserial;
+            _atomname = atomname;
+            _altpos = altpos;
+            _resname = resname;
+            _chainid = chainid;
+            _resseq = resseq;
+            _rescode = rescode;
+            _position = position;
+            _occupancy = occupancy;
+            _tempFactor = tempFactor;
+            _vanity = vanity;
+            _charge = charge;
+            _het = het;
         }
-
     }
 }
