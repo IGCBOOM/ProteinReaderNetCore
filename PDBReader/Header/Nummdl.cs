@@ -13,5 +13,8 @@ namespace PDBReader.Header
         {
             _number = number;
         }
+
+        public uint GetNumber() { return _number; }
+
     }
 }

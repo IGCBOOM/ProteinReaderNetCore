@@ -15,5 +15,9 @@ namespace PDBReader.Header
             _cont = cont;
             _auth = auth;
         }
+
+        public string GetCont() { return _cont; }
+        public string GetAuth() { return _auth; }
+
     }
 }

@@ -15,5 +15,9 @@ namespace PDBReader.Header
             _cont = cont;
             _comp = comp;
         }
+
+        public string GetCont() { return _cont; }
+        public string GetComp() { return _comp; }
+
     }
 }

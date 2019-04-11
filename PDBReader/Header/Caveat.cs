@@ -17,5 +17,10 @@ namespace PDBReader.Header
             _id = id;
             _comment = comment;
         }
+
+        public string GetCont() { return _cont; }
+        public string GetId() { return _id; }
+        public string GetComment() { return _comment; }
+
     }
 }

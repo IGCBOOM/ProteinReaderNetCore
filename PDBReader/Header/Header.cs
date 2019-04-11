@@ -17,5 +17,10 @@ namespace PDBReader.Header
             _date = date;
             _id = id;
         }
+
+        public string GetClassification() { return _classification; }
+        public string GetDate() { return _date; }
+        public string GetId() { return _id; }
+
     }
 }

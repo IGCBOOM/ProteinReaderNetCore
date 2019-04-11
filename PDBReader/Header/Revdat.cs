@@ -29,5 +29,16 @@ namespace PDBReader.Header
             _record3 = record3;
             _record4 = record4;
         }
+
+        public uint GetModnum() { return _modnum; }
+        public string GetCont() { return _cont; }
+        public string GetDate() { return _date; }
+        public string GetModid() { return _modid; }
+        public int GetModtype() { return _modtype; }
+        public string GetRecord1() { return _record1; }
+        public string GetRecord2() { return _record2; }
+        public string GetRecord3() { return _record3; }
+        public string GetRecord4() { return _record4; }
+
     }
 }

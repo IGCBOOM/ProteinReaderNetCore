@@ -13,5 +13,8 @@ namespace PDBReader.Header
         {
             _text = text;
         }
+
+        public string GetText() { return _text; }
+
     }
 }

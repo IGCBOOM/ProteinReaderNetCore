@@ -15,5 +15,9 @@ namespace PDBReader.Header
             _cont = cont;
             _keywds = keywds;
         }
+
+        public string GetCont() { return _cont; }
+        public string GetKeywds() { return _keywds; }
+
     }
 }
