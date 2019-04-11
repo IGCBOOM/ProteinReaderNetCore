@@ -41,5 +41,10 @@ namespace PDBReader.Coordinates
             _vanity = vanity;
             _charge = charge;
         }
+
+        public uint GetSerial() { return _serial; }
+
+        public string GetAtomName() { return _atomname; }
+
     }
 }
