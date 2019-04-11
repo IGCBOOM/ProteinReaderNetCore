@@ -12,24 +12,21 @@ namespace PDBReader
 
             string Filepath = Console.ReadLine();
             string[] lines = System.IO.File.ReadAllLines(Filepath);
-            string[] RecName = new string[6];
-            string RecName2;
+            string RecName;
 
             foreach (string line in lines)
             {
-                for (int i = 0; i <= 5; i++)
-                {
 
-                    RecName[i] = line[i].ToString();
+                RecName = GetFromString(0, 5, line);
 
-                }
-
-                RecName2 = ConvertStringArrayToString(RecName);
-
-                switch (RecName2)
+                switch (RecName)
                 {
                     case "ATOM  ":
                         Console.WriteLine("It's atom time babyyyy!!");
+                        break;
+
+                    case "HETATM":
+                        Console.WriteLine("It's (het)atom time babyyyy!!");
                         break;
 
                     case "END   ":
@@ -42,7 +39,7 @@ namespace PDBReader
 
                 }
 
-                //Console.WriteLine(RecName2);
+                //Console.WriteLine(GetFromString(3, 7, "Lorum Ipsum Hello world test abcdef"));
             }
 
 
@@ -63,5 +60,22 @@ namespace PDBReader
             }
             return builder.ToString();
         }
+
+        static string GetFromString(int start, int end, string line)
+        {
+
+            string[] tempString = new string[line.Length];
+
+            for (int i = start; i <= end; i++)
+            {
+
+                tempString[i] = line[i].ToString();
+
+            }
+
+            return ConvertStringArrayToString(tempString);
+
+        }
+
     }
 }
