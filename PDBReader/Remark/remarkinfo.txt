@@ -1,0 +1,37 @@
+﻿Info
+--------
+Important ones to sort;
+0, 2, 4, 5, 200
+100 looks pretty important, not sure.
+Maybe we can warn the user if 5 is present
+
+
+"REMARK 200"
+"is mandatory if single crystal, fiber, or polycrystalline X-ray diffraction experiments were performed."
+sorting this one looks important.
+looks like its always in the same order too.
+
+"REMARK 0"
+Updates
+
+"REMARK 1"
+proceeded by a word, and a bunch of info
+no suprise.
+we can only sort this later when its in unity.
+
+"REMARK 2"
+im assuming the resolution of the model
+
+"REMARK 4"
+PDB version!
+
+"REMARK 5"
+Obsolete statement
+
+"REMARK 6 - 99"
+No idea, used to be used for pretty looks
+looks like it was removed though
+
+"REMARK 100"
+PDB Process site. Not sure what it is.
+
