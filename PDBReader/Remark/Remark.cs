@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PDBReader.Header
+namespace PDBReader.Remark
 {
     class Remark
     {
