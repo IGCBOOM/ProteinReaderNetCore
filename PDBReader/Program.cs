@@ -74,9 +74,9 @@ namespace PDBReader
                             new Color(255, 255, 255, 255)
                             ));
 
-                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().x() + " hx ");
-                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().y() + " hy ");
-                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().z() + " hz ");
+                        Console.Write(AllHetAtoms[AllHetAtoms.Count - 1].GetPosition().x() + " hx ");
+                        Console.Write(AllHetAtoms[AllHetAtoms.Count - 1].GetPosition().y() + " hy ");
+                        Console.Write(AllHetAtoms[AllHetAtoms.Count - 1].GetPosition().z() + " hz ");
                         Console.Write("\n");
 
                         break;
