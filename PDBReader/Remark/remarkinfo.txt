@@ -11,6 +11,11 @@ Maybe we can warn the user if 5 is present
 sorting this one looks important.
 looks like its always in the same order too.
 
+COLUMNS 46 - 80 for things like
+REMARK 200  EXPERIMENT TYPE                : X-RAY DIFFRACTION  
+
+
+
 "REMARK 0"
 Updates
 
