@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
+using PDBReader.Coordinates;
 
 namespace PDBReader
 {
@@ -13,6 +15,7 @@ namespace PDBReader
             string Filepath = Console.ReadLine();
             string[] lines = System.IO.File.ReadAllLines(Filepath);
             string RecName;
+            List<Atom> AllHetAtoms = null;
 
             foreach (string line in lines)
             {
@@ -27,6 +30,13 @@ namespace PDBReader
 
                     case "HETATM":
                         Console.WriteLine("It's (het)atom time babyyyy!!");
+
+                        AllHetAtoms.Add(new Atom( 
+                            Convert.ToUInt32(GetFromString(6, 10, line)), 
+                            GetFromString(12, 15, line), 
+                            GetFromString(16, 16, line)
+                            ));
+
                         break;
 
                     case "END   ":
