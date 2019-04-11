@@ -93,8 +93,6 @@ namespace PDBReader
 
             }
 
-            Console.WriteLine(AllAtoms[3].GetVanity());
-
             Console.WriteLine(" - END - ");
             Console.ReadLine();
 
