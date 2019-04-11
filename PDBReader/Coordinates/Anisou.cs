@@ -46,5 +46,30 @@ namespace PDBReader.Coordinates
 
         public string GetAtomName() { return _atomname; }
 
+        public char GetAltLoc() { return _altloc; }
+
+        public string GetResName() { return _resname; }
+
+        public char GetChainId() { return _chainid; }
+
+        public uint GetResSeq() { return _resseq; }
+
+        public char GetiCode() { return _icode; }
+
+        public int GetI1() { return _i1; }
+
+        public int GetI2() { return _i2; }
+
+        public int GetI3() { return _i3; }
+
+        public int GetI4() { return _i4; }
+
+        public int GetI5() { return _i5; }
+
+        public int GetI6() { return _i6; }
+
+        public string GetVanity() { return _vanity; }
+
+        public int GetCharge() { return _charge; }
     }
 }
