@@ -21,5 +21,15 @@ namespace PDBReader.Coordinates
             _resseq = resseq;
             _rescode = rescode;
         }
+
+        public string GetAtomSerial() { return _atomserial; }
+
+        public string GetResName() { return _resname; }
+
+        public char GetChainID() { return _chainid; }
+
+        public uint GetResSeq() { return _resseq; }
+
+        public char GetResCode() { return _rescode; }
     }
 }
