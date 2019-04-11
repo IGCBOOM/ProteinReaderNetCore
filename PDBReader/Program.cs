@@ -46,6 +46,12 @@ namespace PDBReader
                             false
                             ));
 
+                        //we printin atoms bois
+                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().x() + " x ");
+                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().y() + " y ");
+                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().z() + " x ");
+                        Console.Write("\n");
+
                         break;
 
                     case "HETATM":
@@ -66,6 +72,11 @@ namespace PDBReader
                             true
                             ));
 
+                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().x() + " hx ");
+                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().y() + " hy ");
+                        Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().z() + " hz ");
+                        Console.Write("\n");
+
                         break;
 
                     case "END   ":
@@ -80,7 +91,7 @@ namespace PDBReader
 
             }
 
-            Console.WriteLine(AllAtoms[3].getVanity());
+            //Console.WriteLine(AllAtoms[3].GetVanity());
 
             Console.WriteLine(" - END - ");
             Console.ReadLine();
