@@ -18,9 +18,9 @@ namespace PDBReader.Coordinates
         private string _vanity;
         private int _charge;
         private bool _het;
-        private Color _col;
+        private Color _col = new Color(255, 255, 255, 255);
 
-        public Atom(uint atomserial, string atomname, char altpos, string resname, char chainid, uint resseq, char rescode, Vector3 position, double occupancy, double tempFactor, string vanity, int charge, bool het, Color _col)
+        public Atom(uint atomserial, string atomname, char altpos, string resname, char chainid, uint resseq, char rescode, Vector3 position, double occupancy, double tempFactor, string vanity, int charge, bool het, Color col)
         {
             _atomserial = atomserial;
             _atomname = atomname;
@@ -35,6 +35,7 @@ namespace PDBReader.Coordinates
             _vanity = vanity;
             _charge = charge;
             _het = het;
+            _col = col;
         }
 
         public uint GetAtomserial() { return _atomserial; }

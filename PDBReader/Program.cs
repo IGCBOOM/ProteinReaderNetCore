@@ -43,7 +43,8 @@ namespace PDBReader
                             Convert.ToDouble(GetFromString(60, 65, line)),
                             GetFromString(76, 77, line),
                             testCharge(GetFromString(78, 79, line)),
-                            false
+                            false,
+                            new Color(255, 255, 255, 255)
                             ));
 
                         //we printin atoms bois
@@ -69,7 +70,8 @@ namespace PDBReader
                             Convert.ToDouble(GetFromString(60, 65, line)),
                             GetFromString(76, 77, line),
                             testCharge(GetFromString(78, 79, line)),
-                            true
+                            true,
+                            new Color(255, 255, 255, 255)
                             ));
 
                         Console.Write(AllAtoms[AllAtoms.Count - 1].GetPosition().x() + " hx ");
