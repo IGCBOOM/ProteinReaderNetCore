@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace PDBReader.Coordinates
+namespace PDBReader.Tools
 {
-    internal class Vector3
+    internal partial class Vector3
     {
 
         double _x;
@@ -16,9 +16,9 @@ namespace PDBReader.Coordinates
             this._z = z;
         }
 
-        public double x() { return _x; }
-        public double y() { return _y; }
-        public double z() { return _z; }
+        public double X() { return _x; }
+        public double Y() { return _y; }
+        public double Z() { return _z; }
 
         //Gets distance between Vector3's in units.
         public double GetDist(Vector3 vec1, Vector3 vec2)
