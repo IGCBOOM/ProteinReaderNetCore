@@ -3,16 +3,16 @@
     class Mdltyp
     {
 
-        private string _cont;
+        private ushort _cont;
         private string _comment;
 
-        public Mdltyp(string cont, string comment)
+        public Mdltyp(ushort cont, string comment)
         {
             _cont = cont;
             _comment = comment;
         }
 
-        public string GetCont() { return _cont; }
+        public ushort GetCont() { return _cont; }
         public string GetComment() { return _comment; }
 
     }

@@ -3,16 +3,16 @@
     class Keywds
     {
 
-        private string _cont;
+        private ushort _cont;
         private string _keywds;
 
-        public Keywds(string cont, string keywds)
+        public Keywds(ushort cont, string keywds)
         {
             _cont = cont;
             _keywds = keywds;
         }
 
-        public string GetCont() { return _cont; }
+        public ushort GetCont() { return _cont; }
         public string GetKeywds() { return _keywds; }
 
     }

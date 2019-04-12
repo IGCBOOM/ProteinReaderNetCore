@@ -3,16 +3,16 @@
     class Title
     {
 
-        private string _cont;
+        private ushort _cont;
         private string _title;
 
-        public Title(string cont, string title)
+        public Title(ushort cont, string title)
         {
             _cont = cont;
             _title = title;
         }
 
-        public string GetCont() { return _cont; }
+        public ushort GetCont() { return _cont; }
         public string GetTitle() { return _title; }
 
     }

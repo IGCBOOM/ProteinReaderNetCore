@@ -3,16 +3,16 @@
     class Compnd
     {
 
-        private string _cont;
+        private ushort _cont;
         private string _comp;
 
-        public Compnd(string cont, string comp)
+        public Compnd(ushort cont, string comp)
         {
             _cont = cont;
             _comp = comp;
         }
 
-        public string GetCont() { return _cont; }
+        public ushort GetCont() { return _cont; }
         public string GetComp() { return _comp; }
 
     }

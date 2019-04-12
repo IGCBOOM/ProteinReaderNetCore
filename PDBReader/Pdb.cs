@@ -20,12 +20,12 @@ namespace PDBReader
     {
 
         private Header _header; //title section
-        private Title _title;
-        private Caveat _caveat;
-        private Compnd _compnd;
-        private Source _source;
-        private Keywds _keywds;
-        private Expdata _expdata;
+        private List<Title> _title = new List<Title>();
+        private List<Caveat> _caveat = new List<Caveat>();
+        private List<Compnd> _compnd = new List<Compnd>();
+        private List<Source> _source = new List<Source>();
+        private List<Keywds> _keywds = new List<Keywds>();
+        private List<Expdata> _expdata = new List<Expdata>();
         private Nummdl _nummdl;
         private Mdltyp _mdltyp;
         private Author _author;
@@ -79,6 +79,50 @@ namespace PDBReader
 
                 switch (recName)
                 {
+                    case "HEADER":
+                        _header = new Header(
+                            GetFromString(10, 49, line), 
+                            GetFromString(50, 58, line), 
+                            GetFromString(62, 65, line));
+                        break;
+
+                    case "TITLE ":
+                        _title.Add(new Title(
+                            TestCont(GetFromString(8,9,line)),
+                            GetFromString(10,79,line)));
+                        break;
+
+                    case "CAVEAT":
+                        _caveat.Add(new Caveat(
+                            TestCont(GetFromString(8,9,line)),
+                            GetFromString(11,14,line),
+                            GetFromString(19,78,line)));
+                        break;
+
+                    case "COMPND":
+                        _compnd.Add(new Compnd(
+                            TestCont(GetFromString(7,9,line)),
+                            GetFromString(10,79,line)));
+                        break;
+
+                    case "SOURCE":
+                        _source.Add(new Source(
+                            TestCont(GetFromString(7,9,line)),
+                            GetFromString(10,78,line)));
+                        break;
+
+                    case "KEYWDS":
+                        _keywds.Add(new Keywds(
+                            TestCont(GetFromString(8,9,line)),
+                            GetFromString(10,78,line)));
+                        break;
+
+                    case "EXPDTA":
+                        _expdata.Add(new Expdata(
+                            TestCont(GetFromString(8,9,line)),
+                            GetFromString(10,78,line)));
+                        break;
+
                     case "ATOM  ":
 
                         _atoms.Add(new Atom(
@@ -143,7 +187,7 @@ namespace PDBReader
 
         private static string ConvertStringArrayToString(string[] array)
         {
-            //https://www.dotnetperls.com/convert-string-array-string
+
             StringBuilder builder = new StringBuilder();
             foreach (string value in array)
             {
@@ -152,6 +196,7 @@ namespace PDBReader
 
             }
             return builder.ToString();
+
         }
 
         private static string GetFromString(int start, int end, string line)
@@ -173,10 +218,23 @@ namespace PDBReader
         private static int TestCharge(string charge) //this is bullshit
         {
 
-            if (charge != "  ")
+            if (charge.Trim() != String.Empty)
             {
 
                 return Convert.ToInt32(charge);
+
+            }
+            else { return 0; }
+
+        }
+
+        private static ushort TestCont(string cont)
+        {
+
+            if (cont.Trim() != String.Empty)
+            {
+
+                return Convert.ToUInt16(cont);
 
             }
             else { return 0; }
