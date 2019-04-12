@@ -63,13 +63,6 @@ namespace PDBReader
                             false,
                             new Color(255, 255, 255, 255)
                         ));
-
-                        //we printin atoms bois
-                        Console.Write(_atoms[_atoms.Count - 1].GetPosition().X() + " x ");
-                        Console.Write(_atoms[_atoms.Count - 1].GetPosition().Y() + " y ");
-                        Console.Write(_atoms[_atoms.Count - 1].GetPosition().Z() + " x ");
-                        Console.Write("\n");
-
                         break;
 
                     case "HETATM":
@@ -92,12 +85,6 @@ namespace PDBReader
                             true,
                             new Color(255, 255, 255, 255)
                         ));
-
-                        Console.Write(_hetatoms[_hetatoms.Count - 1].GetPosition().X() + " hx ");
-                        Console.Write(_hetatoms[_hetatoms.Count - 1].GetPosition().Y() + " hy ");
-                        Console.Write(_hetatoms[_hetatoms.Count - 1].GetPosition().Z() + " hz ");
-                        Console.Write("\n");
-
                         break;
 
                     case "END   ":

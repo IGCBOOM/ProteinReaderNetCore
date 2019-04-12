@@ -22,7 +22,7 @@ namespace PDBReader.Secondary
         private string _curatom;
         private string _curresname;
         private char _curchainid;
-        private int _curresseq;
+        private uint _curresseq;
         private char _curicode;
         private string _prevatom;
         private string _prevresname;
@@ -30,7 +30,7 @@ namespace PDBReader.Secondary
         private uint _prevresseq;
         private char _previcode;
 
-        public Sheet(uint strand, string sheetid, uint numstrands, string initresname, char initchainid, uint initseqnum, char initicode, string endresname, char endchainid, uint endseqnum, char endicode, int sense, string curatom, string curresname, char curchainid, int curresseq, char curicode, string prevatom, string prevresname, char prevchainid, uint prevresseq, char previcode)
+        public Sheet(uint strand, string sheetid, uint numstrands, string initresname, char initchainid, uint initseqnum, char initicode, string endresname, char endchainid, uint endseqnum, char endicode, int sense, string curatom, string curresname, char curchainid, uint curresseq, char curicode, string prevatom, string prevresname, char prevchainid, uint prevresseq, char previcode)
         {
             _strand = strand;
             _sheetid = sheetid;
@@ -56,7 +56,28 @@ namespace PDBReader.Secondary
             _previcode = previcode;
         }
 
-        //todo: functions
+        public uint GetStrand() { return _strand; }
+        public string GetSheetId() { return _sheetid; }
+        public uint GetNumStrands() { return _numstrands; }
+        public string GetInitResName() { return _initresname; }
+        public char GetInitChainId() { return _initchainid; }
+        public uint GetInitSeqNum() { return _initseqnum; }
+        public char GetInitICode() { return _initicode; }
+        public string GetEndResName() { return  _endresname; }
+        public char GetEndChainId() { return  _endchainid; }
+        public uint GetEndSeqNum() { return _endseqnum; }
+        public char GetEndICode() { return _endicode; }
+        public int GetSense() { return _sense; }
+        public string GetCurAtom() { return _curatom; }
+        public string GetCurResName() { return _curresname; }
+        public char GetCurChainId() { return _curchainid; }
+        public uint GetCurResSeq() { return _curresseq; }
+        public char GetCurICode() { return  _curicode; }
+        public string GetPrevAtom() { return _prevatom; }
+        public string GetPrevResName() { return _prevresname; }
+        public char GetPrevChainId() { return _prevchainid; }
+        public uint GetPrevResSeq() { return _prevresseq; }
+        public char GetPrevICode() { return _previcode; }
 
     }
 }
