@@ -5,13 +5,21 @@ using System.Text;
 using PDBReader.Coordinates;
 using PDBReader.TitleSec;
 using PDBReader.Tools;
+using PDBReader.Primary;
+using PDBReader.Heterogen;
+using PDBReader.Secondary;
+using PDBReader.Connectivity_Annotation;
+using PDBReader.Misc_Features;
+using PDBReader.Crystallographic;
+using PDBReader.Connectivity;
+using PDBReader.Bookkeeping;
 
 namespace PDBReader
 {
     class Pdb
     {
 
-        private Header _header;
+        private Header _header; //title section
         private Title _title;
         private Caveat _caveat;
         private Compnd _compnd;
@@ -24,11 +32,39 @@ namespace PDBReader
         private Revdat _revdat;
         private Jrnl _jrnl;
 
-        private Model _model;
+        private Dbref _dbref; //primary section
+        private Seqadv _seqadv;
+        private Seqres _seqres;
+        private Modres _modres;
+
+        private Het _het; //heterogen section
+        private Formul _formul;
+        private Hetnam _hetnam;
+        private Hetsyn _hetsyn;
+
+        private Helix _helix; //secondary section
+        private Sheet _sheet;
+
+        private Ssbond _ssbond; //connectivity section
+        private Link _link;
+        private Cispep _cicpep;
+
+        private Site _site; //misc
+
+        private Cryst1 _cryst1; //Crystallographic section
+        private Mtrixn _mtrixn;
+        private Origxn _origxn;
+        private Scalen _scalen;
+
+        private Model _model; //Coordinate section
         private List<Atom> _atoms = new List<Atom>();
         private List<Atom> _hetatoms = new List<Atom>();
         private List<Anisou> _anisous = new List<Anisou>();
         private List<Ter> _ters = new List<Ter>();
+
+        private Conect _conect; //connectivity section
+
+        private Master _master; //bookkeeping
 
         public Pdb(string filepath)
         {
