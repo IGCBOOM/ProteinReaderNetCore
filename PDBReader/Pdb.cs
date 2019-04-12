@@ -27,10 +27,10 @@ namespace PDBReader
         private List<Keywds> _keywds = new List<Keywds>();
         private List<Expdata> _expdata = new List<Expdata>();
         private Nummdl _nummdl;
-        private Mdltyp _mdltyp;
-        private Author _author;
-        private Revdat _revdat;
-        private Jrnl _jrnl;
+        private List<Mdltyp> _mdltyp = new List<Mdltyp>();
+        private List<Author> _author = new List<Author>();
+        private List<Revdat> _revdat = new List<Revdat>();
+        private List<Jrnl> _jrnl = new List<Jrnl>();
 
         private Dbref _dbref; //primary section
         private Seqadv _seqadv;
@@ -121,6 +121,39 @@ namespace PDBReader
                         _expdata.Add(new Expdata(
                             TestCont(GetFromString(8,9,line)),
                             GetFromString(10,78,line)));
+                        break;
+
+                    case "NUMMDL":
+                        _nummdl = new Nummdl(Convert.ToUInt32(GetFromString(10,13,line)));
+                        break;
+
+                    case "MDLTYP":
+                        _mdltyp.Add(new Mdltyp(
+                            TestCont(GetFromString(8,9,line)),
+                            GetFromString(10,79,line)));
+                        break;
+
+                    case "AUTHOR":
+                        _author.Add(new Author(
+                            TestCont(GetFromString(8,9,line)),
+                            GetFromString(10,78,line)));
+                        break;
+
+                    case "REVDAT":
+                        _revdat.Add(new Revdat(
+                            Convert.ToUInt32(GetFromString(7,9,line)),
+                            TestCont(GetFromString(10,11,line)),
+                            GetFromString(13,21,line),
+                            GetFromString(23,26,line),
+                            Convert.ToInt32(GetFromString(31,31,line)),
+                            GetFromString(39,44,line),
+                            GetFromString(46,51,line),
+                            GetFromString(53,58,line),
+                            GetFromString(60,65,line)));
+                        break;
+
+                    case "JNRL  ":
+                        _jrnl.Add(new Jrnl(GetFromString(12,78,line)));
                         break;
 
                     case "ATOM  ":
@@ -218,7 +251,7 @@ namespace PDBReader
         private static int TestCharge(string charge) //this is bullshit
         {
 
-            if (charge.Trim() != String.Empty)
+            if (charge.Trim() != string.Empty)
             {
 
                 return Convert.ToInt32(charge);
@@ -231,7 +264,7 @@ namespace PDBReader
         private static ushort TestCont(string cont)
         {
 
-            if (cont.Trim() != String.Empty)
+            if (cont.Trim() != string.Empty)
             {
 
                 return Convert.ToUInt16(cont);

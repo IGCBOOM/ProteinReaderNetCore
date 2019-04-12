@@ -3,16 +3,16 @@
     class Author
     {
 
-        private string _cont;
+        private ushort _cont;
         private string _auth;
 
-        public Author(string cont, string auth)
+        public Author(ushort cont, string auth)
         {
             _cont = cont;
             _auth = auth;
         }
 
-        public string GetCont() { return _cont; }
+        public ushort GetCont() { return _cont; }
         public string GetAuth() { return _auth; }
 
     }
