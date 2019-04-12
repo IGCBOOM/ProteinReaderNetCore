@@ -205,7 +205,7 @@ namespace PDBReader
                         break;
 
                     default:
-                        //Console.WriteLine("Unknown type.");
+                        Console.WriteLine("Unknown type.");
                         break;
 
                 }
