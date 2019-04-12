@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collectisns.Generic;
+using System.Collections.Generic;
 using System.Text;
 
 namespace PDBReader.Crystallographic
@@ -12,7 +12,7 @@ namespace PDBReader.Crystallographic
         private double _sn3;
         private double _un;
 
-        public Origxn(double sn1, double sn2, double sn3, double un)
+        public Scalen(double sn1, double sn2, double sn3, double un)
         {
             _sn1 = sn1;
             _sn2 = sn2;
