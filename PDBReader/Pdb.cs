@@ -176,6 +176,8 @@ namespace PDBReader
                             false,
                             new Color(255, 255, 255, 255)
                         ));
+
+                        
                         break;
 
                     case "HETATM":
@@ -205,7 +207,7 @@ namespace PDBReader
                         break;
 
                     default:
-                        Console.WriteLine("Unknown type.");
+                        //Console.WriteLine("Unknown type.");
                         break;
 
                 }

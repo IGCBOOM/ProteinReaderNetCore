@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDBReader", "PDBReader\PDBReader.csproj", "{06789C55-C511-44F3-B16A-25E7EE7D3357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mmCIFReader", "mmCIFReader\mmCIFReader.csproj", "{7E8C4697-4B12-4145-8489-E8002E23D51B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mmCIFReader", "mmCIFReader\mmCIFReader.csproj", "{7E8C4697-4B12-4145-8489-E8002E23D51B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
